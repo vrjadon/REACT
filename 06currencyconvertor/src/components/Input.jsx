@@ -1,4 +1,4 @@
-import { useId } from "react";
+import React ,{useId } from "react";
 
 function Input ({
   label,
@@ -7,9 +7,9 @@ function Input ({
   onCurrencyChange,
   currencyOptions = [],
   selectCurrency = "usd",
-  amountDisable = "false",
-  currencyDisable = "false",
-  className = "",
+  amountDisable = false,
+  currencyDisable = false,
+  className = ""
 }) {
   const amountInputId = useId()
   return (
@@ -46,7 +46,8 @@ function Input ({
               </select>
           </div>
       </div>
-  );
-}
+  
+                );
+              } 
 
 export default Input;
